@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script><script src="classic.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+            background-color: #e0f7fa;
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        #imageList{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #imageList img{
+            width:30px;
+            height:auto;
+        }
+    </style>
+    <script>
+        for(let i = 1;i <= 10; i++){
+            document.write(i + " ");
+        }
+
+        function insert(){
+            let images = [
+                "apple",
+                "blueberry",
+                "cherry",
+                "grape",
+                "mango",
+                "melon",
+                "orange",
+                "peach",
+                "pear",
+                "strawberry",
+                "suica"
+                ];
+                for(let i = 0;i < images.length;i++){
+                    document.getElementById("imageList").innerHTML += "<img src=" + images[i] + ".png>";
+                }
+
+                
+        }
+    </script>
+</head>
+<body>
+	<div>
+		<button onclick="insert()">画像を表示</button>
+	</div>
+	<div id="imageList"></div>
+</body>
+</html>
